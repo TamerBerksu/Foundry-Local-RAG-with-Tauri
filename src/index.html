@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Culm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grove">
+      <aside class="stalk">
+        <header class="crest">
+          <span class="crest-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div>
+            <h1>Culm</h1>
+            <p class="crest-sub">a library that stays home</p>
+          </div>
+        </header>
+
+        <div class="shelf-head">
+          <span>texts</span>
+          <span id="tally" class="tally">0</span>
+        </div>
+
+        <ol id="shelf" class="shelf"></ol>
+
+        <label id="drop" class="drop">
+          <input id="picker" type="file" accept=".md,.markdown,.txt,.text" multiple hidden />
+          <span class="drop-line">lay a text here</span>
+          <span class="drop-hint">.txt or .md, dropped or chosen</span>
+        </label>
+
+        <button id="replant" class="quiet" type="button">replant the sample texts</button>
+
+        <div id="sprout" class="sprout" data-phase="waking">
+          <div class="shoot" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sprout-words">
+            <span id="sprout-phase" class="sprout-phase">waking</span>
+            <span id="sprout-message" class="sprout-message">Waking the local runtime</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="clearing">
+        <div class="canopy">
+          <button id="sparse" class="knot" type="button" aria-pressed="false">
+            <span class="knot-dot" aria-hidden="true"></span>sparse
+          </button>
+          <button id="clear" class="knot" type="button">clear the path</button>
+        </div>
+
+        <section id="thread" class="thread" aria-live="polite">
+          <div id="stillness" class="stillness">
+            <p class="stillness-line">Ask the grove.</p>
+            <p class="stillness-sub">Answers are drawn only from the texts on the left, on this machine.</p>
+          </div>
+        </section>
+
+        <form id="ground" class="ground" autocomplete="off">
+          <textarea id="question" rows="1" placeholder="What would you like to know?" spellcheck="true"></textarea>
+          <button id="hush" class="hush" type="button" hidden>hush</button>
+          <button id="send" class="leaf" type="submit" aria-label="Send"><span></span></button>
+        </form>
+      </main>
+    </div>
+
+    <template id="exchange-tpl">
+      <article class="exchange">
+        <p class="asked"></p>
+        <div class="told growing"></div>
+        <ul class="strips"></ul>
+      </article>
+    </template>
+
+    <script src="main.js"></script>
+  </body>
+</html>

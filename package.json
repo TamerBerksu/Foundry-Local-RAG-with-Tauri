@@ -1,0 +1,16 @@
+{
+  "name": "culm",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "gather": "cargo build --release --manifest-path src-tauri/Cargo.toml && node scripts/gather-native.mjs",
+    "package": "npm run gather && tauri build",
+    "test": "cargo test --manifest-path src-tauri/Cargo.toml --lib"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}
